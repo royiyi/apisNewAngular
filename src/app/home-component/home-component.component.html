@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- Componente que tiene la informacion del formulario -->
+    <app-formulario (parametrosSeleccionados)="buscarNoticias($event)"></app-formulario>
+    <!-- Componente que tiene la informacion del formulario -->
+    <!-- Renderizamos el componente Spinner 
+      *ngIf="loading" = solo se muestra cuando loading es verdadero
+    -->
+    <app-spinner *ngIf="loading"></app-spinner>
+    <!-- Renderizamos el componente Spinner -->
+  
+  
+    <!-- Componentes listado de noticias 
+      [listNoticias] este nombre se corresponde con el nombre del input " @Input() listNoticias:any"
+      "listNoticias" este nombre se corresponde con la variable del componente padre "listNoticias:any[]=[]"
+    -->
+    <app-listado-noticias [listNoticias]="listNoticias"></app-listado-noticias>
+    <!-- Componentes listado de noticias -->
+  </div>
